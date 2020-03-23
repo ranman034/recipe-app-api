@@ -1,3 +1,4 @@
+"""Admin settings file"""
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext as _
@@ -6,6 +7,7 @@ from core import models
 
 
 class UserAdmin(BaseUserAdmin):
+    """Custom user admin settings"""
     ordering = ['id']
     list_display = ['email', 'name']
     fieldsets = (
